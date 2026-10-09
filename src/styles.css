@@ -41,7 +41,32 @@ main:focus{outline:none}
 .hero-heading h1{font-size:15.35vw;line-height:1.02;white-space:nowrap;text-align:center;animation:masthead-in 1.1s var(--ease-out) both}
 .hero-info{padding:18px var(--gutter) 24px;display:flex;justify-content:space-between;align-items:center;font-size:0.9375rem;line-height:1.6;gap:24px;animation:fade-in 900ms ease .35s both}
 .small-separator{padding:0 10px;color:var(--muted)}
-.is-navigated .hero-heading h1,.is-navigated .hero-info{animation:none}
+.hero-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:2vw;padding:clamp(16px,2.5vw,40px) var(--gutter) clamp(40px,6vw,90px);align-items:start}
+.hero-photos img{animation:fade-in 900ms ease .5s both}
+.home-hero{position:relative}
+.hero-heading,.hero-info,.hero-photos{position:relative}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.is-navigated .hero-heading h1,.is-navigated .hero-info,.is-navigated .hero-photos img{animation:none}
+/* Ink entrance (src/hero-ink.js). With scripts and motion, the masthead starts hidden for the canvas to draw;
+   if the canvas never takes over, the static masthead fades in after 3.5s. */
+@media(scripting:enabled) and (prefers-reduced-motion:no-preference){html:not(.is-navigated):not(.ink-off) .home-hero :is(.hero-heading h1,.hero-info,.hero-photos img){animation:fade-in 600ms ease 3.5s both}}
+.ink-live .home-hero :is(.hero-heading h1,.hero-photos img){opacity:0;animation:none}
+.ink-live .home-hero .hero-info{animation:none}
+/* Opening contact sheet (src/intro.js). Present from the first paint when scripts and motion are on. */
+.intro{display:none}
+@media(scripting:enabled) and (prefers-reduced-motion:no-preference){html:not(.intro-skip) .intro{display:block}}
+html.intro-active{overflow:hidden}
+.intro{position:fixed;inset:0;z-index:60;background:var(--black);color:var(--white);clip-path:inset(0 0 0 0)}
+.intro.is-leaving{clip-path:inset(0 0 100% 0);transition:clip-path 800ms var(--ease-in-out);pointer-events:none}
+.intro-frame{position:absolute;left:50%;top:50%;height:min(69.6vh,672px);max-width:calc(100vw - 2 * var(--gutter));aspect-ratio:3571/5000;transform:translate(-50%,-50%)}
+.intro.is-leaving .intro-frame{transform:translate(-50%,-50%) translateY(-7vh);transition:transform 800ms var(--ease-in-out)}
+.intro-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
+.intro-frame img[data-on]{opacity:1}
+.intro-mark,.intro-meta,.intro-count,.intro-caption{position:absolute;margin:0;animation:fade-in 400ms ease both}
+.intro-mark{top:calc(18px + var(--safe-t));left:var(--gutter);font-size:1.6875rem}
+.intro-meta{top:calc(26px + var(--safe-t));right:var(--gutter);font-size:0.75rem;letter-spacing:.015em;color:var(--muted)}
+.intro-count{bottom:calc(20px + var(--safe-b));left:var(--gutter);font-size:clamp(3rem,7vw,6.5rem);font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.intro-caption{bottom:calc(28px + var(--safe-b));right:var(--gutter);font-size:0.75rem;letter-spacing:.015em;color:var(--muted)}
 .home-introduction{display:grid;grid-template-columns:1.1fr 1fr;gap:8vw;padding-top:62px;padding-bottom:90px;border-bottom:1px solid var(--line);align-items:start}
 .intro-copy h2{font-size:clamp(1.5rem,2.6vw,2.5rem);line-height:1.15;letter-spacing:-.03em;font-weight:500;margin-bottom:25px}
 .intro-copy p{font-size:1.0625rem;line-height:1.65;color:var(--muted);max-width:600px;margin:0 0 22px}
@@ -269,6 +294,8 @@ summary::-webkit-details-marker{display:none}
   .hero-info{display:grid;grid-template-columns:1fr auto;gap:12px;font-size:0.8125rem;padding:8px var(--gutter) 20px;line-height:1.65}
   .hero-info p:first-child{grid-column:1/-1}
   .hero-info a{grid-column:2;grid-row:2}
+  .hero-photos{grid-template-columns:1fr 1fr;gap:10px}
+  .hero-photos figure:last-child{display:none}
   .home-introduction{grid-template-columns:1fr;gap:35px;padding-top:32px;padding-bottom:65px}
   .intro-copy h2{font-size:1.5625rem;margin-bottom:23px}
   .intro-copy p{font-size:1rem;margin:0 0 20px}

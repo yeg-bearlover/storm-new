@@ -20,7 +20,9 @@ assert.equal(film.embedUrl, null, 'Keep unreleased film playback disabled.');
 
 const home = renderPage('/');
 assert(home.includes('/assets/film-01-large.webp'), 'Use the pomegranate dinner-table still for the homepage film preview.');
-assert(!/<img/.test(home.match(/<section class="home-hero"[\s\S]*?<\/section>/)[0]), 'Go straight from the masthead into the biography.');
+const homeHero = home.match(/<section class="home-hero"[\s\S]*?<\/section>/)[0];
+assert.equal((homeHero.match(/<img/g) || []).length, 3, 'Three Hellion editorial photographs beneath the masthead.');
+assert(!homeHero.includes('editorial-v1-17'), 'Keep photograph 17 for the Hellion cover, not the masthead.');
 assert(!home.match(/<header[\s\S]*?<\/header>/)[0].includes('Storm Nijhuis'), 'Keep the large homepage name without a second header wordmark.');
 assert(home.includes('/assets/editorial-v1-17-large.webp'), 'Use the chosen horned editorial photograph 17.');
 for (const id of ['9336', '9337', '9338']) assert(home.includes(`/assets/styling-${id}-large.webp`));
