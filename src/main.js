@@ -2,6 +2,7 @@ import './styles.css';
 import { assets, looks } from './content.js';
 import { renderPage, renderLook, normalizePath, pageMeta, description } from './templates.js';
 import { createSpring, project, rubberband } from './spring.js';
+import { playIntro } from './intro.js';
 
 const app = document.querySelector('#app');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -10,6 +11,8 @@ const easeOut = 'cubic-bezier(0.23, 1, 0.32, 1)';
 const PHOTO_GAP = 24;
 let dispose = () => {};
 let firstBind = true;
+// The opening contact sheet, on every full page load; null when it is not playing.
+const intro = playIntro();
 
 function setMetadata(path) {
   const meta = pageMeta(path);
@@ -69,6 +72,14 @@ function bindPage() {
     app.querySelectorAll('main img').forEach((img) => { if (!onScreen(img)) fadeInWhenLoaded(img); });
   } else {
     document.documentElement.classList.remove('js-motion');
+  }
+  // The ink masthead entrance belongs to the first visit only (src/hero-ink.js, loaded on demand).
+  let disposeInk = () => {};
+  const hero = app.querySelector('.home-hero');
+  if (hero && firstBind && motion() && !document.documentElement.classList.contains('is-navigated')) {
+    import('./hero-ink.js')
+      .then(({ mountInk }) => { if (!signal.aborted) disposeInk = mountInk(hero, { gate: intro }); })
+      .catch(() => document.documentElement.classList.add('ink-off'));
   }
   firstBind = false;
 
@@ -464,6 +475,7 @@ function bindPage() {
     revealObserver?.disconnect();
     cancelAnimationFrame(poseFrame);
     cancelAnimationFrame(headerFrame);
+    disposeInk();
   };
 }
 
