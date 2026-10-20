@@ -68,8 +68,12 @@ function binheLink() {
   return projectLink({ href: '/design/binhe/', image: binhe.cover, title: binhe.title, label: `Collection · ${binhe.role}`, featured: true });
 }
 
+// Hellion editorial portraits drawn in beneath the masthead (src/hero-ink.js). Photograph 17 is the
+// Hellion cover further down, so the white-horned look 15 takes the centre here.
+const heroPhotos = ['editorial-v1-01', 'editorial-v1-15', 'editorial-v1-06'];
+
 function home() {
-  return `<section class="home-hero" aria-labelledby="home-title"><div class="hero-heading"><h1 id="home-title" class="gothic">Storm Nijhuis</h1></div><div class="hero-info"><p>Fashion design · Styling · Creative direction</p><p>Amsterdam, NL <span class="small-separator">/</span> Lichting finalist</p></div></section>
+  return `<section class="home-hero" aria-labelledby="home-title"><div class="hero-heading"><h1 id="home-title" class="gothic">Storm Nijhuis</h1></div><div class="hero-info"><p>Fashion design · Styling · Creative direction</p><p>Amsterdam, NL <span class="small-separator">/</span> Lichting finalist</p></div><div class="hero-photos">${heroPhotos.map((id) => `<figure>${picture(id, { eager: true, sizes: '(max-width: 700px) 46vw, 31vw' })}</figure>`).join('')}</div></section>
     <section id="introduction" class="home-introduction section-pad"><div class="intro-copy reveal"><h2>The person behind the work</h2>${homeBiography.map((paragraph) => `<p>${paragraph}</p>`).join('')}<a class="text-link" href="/about/">More about me</a></div><a class="intro-portrait reveal" href="/about/" aria-label="Meet Storm">${picture('presentation-8537', { eager: true })}<span>Storm presenting Hellion</span></a></section>
     <section class="selected-work section-pad" aria-labelledby="selected-title"><div class="section-heading reveal"><h2 id="selected-title">Design</h2><a class="section-link" href="/design/">View all</a></div><div class="project-pair reveal">${projectLink({ href: '/design/hellion/', image: 'editorial-v1-17', title: 'Hellion', label: 'Collection', extra: '2026' })}${projectLink({ href: '/design/anima-obscura/', image: 'anima-08', title: 'Anima Obscura', label: 'Collection', extra: '2025' })}${binheLink()}</div></section>
     <section class="styling-preview section-pad reveal"><div class="section-heading"><h2>Styling</h2><a class="section-link" href="/styling/">View all</a></div><div class="styling-strip">${stylingProjects.map((project) => `<a class="styling-preview-project" href="/styling/#${project.id}"><div class="styling-preview-image">${picture(project.cover, { sizes: '(max-width: 700px) 72vw, 30vw' })}</div><div class="styling-preview-caption"><h3>${project.title}</h3><p>${project.label}</p></div></a>`).join('')}</div></section>

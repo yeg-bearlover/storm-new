@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      gsap:
+        specifier: ^3.15.0
+        version: 3.15.0
+      three:
+        specifier: ^0.186.1
+        version: 0.186.1
     devDependencies:
       vite:
         specifier: ^7.1.0
@@ -337,6 +344,9 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
+  gsap@3.15.0:
+    resolution: {integrity: sha512-dMW4CWBTUK1AEEDeZc1g4xpPGIrSf9fJF960qbTZmN/QwZIWY5wgliS6JWl9/25fpTGJrMRtSjGtOmPnfjZB+A==}
+
   nanoid@3.3.20:
     resolution: {integrity: sha512-uKdg2G3GNCKQn9byYOpxbGqrT2fGO5KRt5J/8b3pok8rT6qxGWF6hxMyJiEYtAf+FVyYuD9hRaDqX5uPFYJ4ZQ==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -361,6 +371,9 @@ packages:
   source-map-js@1.2.2:
     resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
+
+  three@0.186.1:
+    resolution: {integrity: sha512-blFeqb49wRCSGUGj7gtpfnSGHy2lwDk94RhUmS1c/hTby70kvChbWpkJ4Pm1390LqzzvTmzgXKHPEafJwCb8jA==}
 
   tinyglobby@0.2.17:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
@@ -602,6 +615,8 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
+  gsap@3.15.0: {}
+
   nanoid@3.3.20: {}
 
   picocolors@1.1.1: {}
@@ -647,6 +662,8 @@ snapshots:
       fsevents: 2.3.3
 
   source-map-js@1.2.2: {}
+
+  three@0.186.1: {}
 
   tinyglobby@0.2.17:
     dependencies:

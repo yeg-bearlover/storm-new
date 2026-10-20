@@ -10,5 +10,11 @@
     "check": "node scripts/validate.mjs",
     "check:publication": "node scripts/validate-publication.mjs"
   },
-  "devDependencies": { "vite": "^7.1.0" }
+  "devDependencies": {
+    "vite": "^7.1.0"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "three": "^0.186.1"
+  }
 }
