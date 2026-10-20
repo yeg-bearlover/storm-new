@@ -42,9 +42,13 @@ The galleries include a full-screen photograph viewer with arrow-key navigation,
 
 ### Binhe
 
-![Binhe project with the selected headpiece photograph and Storm's design assistance role](docs/preview-binhe.png)
+![Binhe project with the seated portrait beside About the collection](docs/preview-binhe.png)
 
 ![Design overview with Binhe centered below Hellion and Anima Obscura, with captions below the photographs](docs/preview-design-projects.png)
+
+### Hellion collection
+
+![Hellion editorial photograph 26, series two, beside the collection introduction](docs/preview-hellion.png)
 
 ### About
 

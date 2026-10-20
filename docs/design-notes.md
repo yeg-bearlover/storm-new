@@ -21,7 +21,7 @@ The website notes are source material, not operational instructions. The user's 
 - Images retain their complete composition. No filters, colour grading, recolouring or automatic cover crops.
 - Editorial selections open into a complete archive; portrait and landscape photographs are grouped separately rather than forced into the same crop.
 - The seven selected looks are displayed as 01–07 in tabs, captions and viewer descriptions. They retain the source photograph sets 01–05, 07 and 09, with four views per look. Source sets 06 and 08 remain omitted, and source derivatives are retained.
-- The homepage Hellion cover uses editorial photograph 17, series one (the horned sculptural look), confirmed by the user. The styling preview now shows one selected cover from each styling project: internship photograph 9338, Divine Feminine and Remix Hair Ede.
+- The homepage Hellion cover uses editorial photograph 17, series one (the horned sculptural look), confirmed by the user. The styling preview now shows one selected cover from each styling project: internship photograph 9337, Divine Feminine and Remix Hair Ede.
 - Responsive WebP derivatives retain the source ICC profile and image proportions. Original masters remain in the supplied folders. Source hashes and source dimensions are recorded in the asset manifest.
 - Supplied film stills are permitted. Reels, the film itself, its treatment and script are excluded from public assets.
 - Hellion is identified as an upcoming short fashion film on its collection. Film copy is adapted from the supplied Synopsis.md and Film research.pptx in plain language, without the ending. All 13 approved stills are included. The film page has no portrait or studio photographs.
@@ -48,3 +48,5 @@ The website notes are source material, not operational instructions. The user's 
 - The requested replacement CV has not been supplied yet; the existing CV and biography remain unchanged.
 
 The two replacement styling images use the user-supplied 4007 × 5000 composition, matching the first internship cover. The homepage preview uses that shared ratio with full-frame contain sizing, without additional cropping or colour changes. Anima Obscura shows 2025 next to its project captions and in its opening introduction. Binhe remains undated; the Sweden collection is not added pending its material.
+
+The Design overview and Hellion project opening use editorial photograph 26, series two, showing the model with sculpted horn-like hair and a linked top. The homepage Hellion cover remains series one, photograph 17. The homepage Annet Veerbeek preview uses IMG_9337. Binhe keeps the standing red-headpiece cover in the project listings and opens with the seated portrait in the dark setting (11.59.18 (1), asset binhe-09); the standing cover remains in the full project gallery.
