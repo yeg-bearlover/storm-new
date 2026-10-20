@@ -19,8 +19,8 @@ for (const [index, name, count] of [[1, 'divine-feminine', 10], [2, 'styling-ass
   assert.equal(stylingProjects[index].images.length, count);
   assert.deepEqual([...stylingProjects[index].images].sort(), group(name).sort());
 }
-assert.equal(assets.get(stylingProjects[1].cover).source, 'Styling/WhatsApp Image 2026-10-20 at 11.47.12 (4).jpeg');
-assert.equal(assets.get(stylingProjects[2].cover).source, 'Styling/WhatsApp Image 2026-10-20 at 11.51.56 (3).jpeg');
+assert.equal(assets.get(stylingProjects[1].cover).source, 'storm styling 1.jpg');
+assert.equal(assets.get(stylingProjects[2].cover).source, 'storm styling 2 .jpg');
 assert.equal(assets.get(binhe.cover).source, 'Styling/WhatsApp Image 2026-10-20 at 11.59.17 (6).jpeg');
 assert.equal(binhe.images.length, 16);
 assert.deepEqual([...binhe.images].sort(), group('binhe').sort(), 'Include every Binhe photograph once.');

@@ -36,13 +36,15 @@ The website notes are source material, not operational instructions. The user's 
 - RB Campton Neue is not included. Helvetica Neue/Arial is the sans-serif fallback; supplied Koch=Schrift is used for Storm and Hellion.
 - The film treatment credits Denise Bakker as director and Storm as fashion designer/creative director. The user's brief calls Storm the director. Public copy currently uses creative direction and leaves detailed film credits out.
 - Styling shoot dates remain unconfirmed and are omitted. Divine Feminine uses the supplied title. Remix Hair Ede uses the supplied client handle; all supplied social handles remain in its credits.
-- Hellion is dated 2026 from the supplied CV and film treatment. Anima Obscura is undated.
+- Hellion is dated 2026 from the supplied CV and film treatment. Anima Obscura is dated 2025, confirmed by the user.
 - Credits can be edited later as requested. No credits beyond the supplied materials are invented.
 
 ## Added projects — October 2026
 
-- Binhe is the third Design project, below the existing pair so Hellion and Anima Obscura keep their layouts. It has its own page and all 16 supplied photographs. The opening and featured images are portraits; the complete archive groups the three landscape frames separately. Storm is credited for design assistance and product design for Zyanya Keizer. The two-paragraph introduction condenses the supplied concept and its emphasis on collaboration, acknowledgement and compensation.
-- Selected cover sources are exactly `WhatsApp Image 2026-10-20 at 11.47.12 (4).jpeg` (Divine Feminine), `WhatsApp Image 2026-10-20 at 11.51.56 (3).jpeg` (Remix Hair Ede), and `WhatsApp Image 2026-10-20 at 11.59.17 (6).jpeg` (Binhe).
+- Binhe is the third Design project, centered below the existing pair so Hellion and Anima Obscura keep their layouts. Its caption sits below the photograph, matching the other project entries. It has its own page and all 16 supplied photographs. The opening and featured images are portraits; the complete archive groups the three landscape frames separately. Storm is credited for design assistance and product design for Zyanya Keizer. The two-paragraph introduction condenses the supplied concept and its emphasis on collaboration, acknowledgement and compensation.
+- Selected cover sources are `storm styling 1.jpg` (Divine Feminine), `storm styling 2 .jpg` (Remix Hair Ede), and `WhatsApp Image 2026-10-20 at 11.59.17 (6).jpeg` (Binhe). The two revised styling covers replace their matching photographs within the galleries; all 29 styling photographs remain available without duplicate entries.
 - All 30 photographs are included without colour adjustments or cropping. Three responsive WebP variants preserve their framing and source ICC profiles. Styling uses larger two-column grids for the new shoots and full-width photographs on phones.
 - Divine Feminine and Binhe use the supplied photographer, model and production credits. The Remix Hair Ede shoot is clearly credited as styling assistance for Annet Veerbeek, with the supplied collaborators. Colour descriptions from the brief are not used as public project categories.
 - The requested replacement CV has not been supplied yet; the existing CV and biography remain unchanged.
+
+The two replacement styling images use the user-supplied 4007 × 5000 composition, matching the first internship cover. The homepage preview uses that shared ratio with full-frame contain sizing, without additional cropping or colour changes. Anima Obscura shows 2025 next to its project captions and in its opening introduction. Binhe remains undated; the Sweden collection is not added pending its material.

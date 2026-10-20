@@ -3753,26 +3753,26 @@
   {
     "id": "divine-feminine-02",
     "group": "divine-feminine",
-    "source": "Styling/WhatsApp Image 2026-10-20 at 11.47.12 (1).jpeg",
-    "sourceWidth": 1024,
-    "sourceHeight": 1536,
-    "sourceSha256": "d67901a5c6166f028484dc8ab940b6d285ad252d8ba921fe10f75ac564272be7",
-    "width": 1024,
-    "height": 1536,
-    "alt": "Divine Feminine, photograph 02. Louise Aniba photographed by Amilcar, with styling by Storm Nijhuis.",
+    "source": "storm styling 1.jpg",
+    "sourceWidth": 4007,
+    "sourceHeight": 5000,
+    "sourceSha256": "5391c63c24cd06cfbd396aaf6d46546a127293b8d5d604e3ae8a90fab9dbe001",
+    "width": 4007,
+    "height": 5000,
+    "alt": "Louise Aniba seated in a black draped garment, holding a circular headpiece above her head. Styling by Storm Nijhuis for Divine Feminine.",
     "large": {
       "src": "/assets/divine-feminine-02-large.webp",
-      "width": 1024,
-      "height": 1536
+      "width": 1443,
+      "height": 1800
     },
     "medium": {
       "src": "/assets/divine-feminine-02-medium.webp",
-      "width": 768,
-      "height": 1152
+      "width": 962,
+      "height": 1200
     },
     "small": {
       "src": "/assets/divine-feminine-02-small.webp",
-      "width": 400,
+      "width": 481,
       "height": 600
     }
   },
@@ -4065,26 +4065,26 @@
   {
     "id": "styling-assistance-04",
     "group": "styling-assistance",
-    "source": "Styling/WhatsApp Image 2026-10-20 at 11.51.56 (3).jpeg",
-    "sourceWidth": 1179,
-    "sourceHeight": 1447,
-    "sourceSha256": "db77f859c0029ffac32a2ad4f6bfb1c33a0fca7b73a322cf871f5af92f6c238e",
-    "width": 1179,
-    "height": 1447,
+    "source": "storm styling 2 .jpg",
+    "sourceWidth": 4007,
+    "sourceHeight": 5000,
+    "sourceSha256": "37981e056f44f8883abad3996e1312f9cda693efe73ad4c6ee7d6ff3585eeb9a",
+    "width": 4007,
+    "height": 5000,
     "alt": "Model facing the camera in a blue-green feathered look. Styling assistance by Storm Nijhuis, with styling by Annet Veerbeek.",
     "large": {
       "src": "/assets/styling-assistance-04-large.webp",
-      "width": 1179,
-      "height": 1447
+      "width": 1443,
+      "height": 1800
     },
     "medium": {
       "src": "/assets/styling-assistance-04-medium.webp",
-      "width": 884,
-      "height": 1085
+      "width": 962,
+      "height": 1200
     },
     "small": {
       "src": "/assets/styling-assistance-04-small.webp",
-      "width": 489,
+      "width": 481,
       "height": 600
     }
   },

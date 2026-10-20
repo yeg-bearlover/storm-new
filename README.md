@@ -19,7 +19,7 @@ Built with **vanilla JavaScript, CSS and Vite**, with nine portfolio pages and f
 | `/` | Personal introduction and selected design, styling and film work. |
 | `/design/` | An overview of Hellion, Anima Obscura and Binhe. |
 | `/design/hellion/` | The 2026 collection, a seven-look lookbook, editorial archive and presentation photographs. |
-| `/design/anima-obscura/` | A fashion editorial made with Denise Bakker, its photographic archive and project credits. |
+| `/design/anima-obscura/` | A 2025 fashion editorial made with Denise Bakker, its photographic archive and project credits. |
 | `/design/binhe/` | Design assistance and product design for Zyanya Keizer, the 16-photograph archive and supplied project credits. |
 | `/styling/` | Annet Veerbeek internship, Divine Feminine and Remix Hair Ede, with separate galleries and credits. |
 | `/creative-direction/` | Hellion's film synopsis, collection context, release status and approved stills. |
@@ -43,6 +43,8 @@ The galleries include a full-screen photograph viewer with arrow-key navigation,
 ### Binhe
 
 ![Binhe project with the selected headpiece photograph and Storm's design assistance role](docs/preview-binhe.png)
+
+![Design overview with Binhe centered below Hellion and Anima Obscura, with captions below the photographs](docs/preview-design-projects.png)
 
 ### About
 

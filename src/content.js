@@ -14,8 +14,8 @@ export const lookbook = looks.flatMap((look) => look.images);
 export const stylingProjects = [
   { id: 'annet-veerbeek', title: 'Annet Veerbeek', label: 'Internship · Styling assistance', role: 'Styling assistance', cover: 'styling-9338', images: group('styling'), credits: [] },
   {
-    id: 'divine-feminine', title: 'Divine Feminine', label: 'Styling', role: 'Styling', cover: 'divine-feminine-05',
-    images: ['divine-feminine-05', ...group('divine-feminine').filter((id) => id !== 'divine-feminine-05')],
+    id: 'divine-feminine', title: 'Divine Feminine', label: 'Styling', role: 'Styling', cover: 'divine-feminine-02',
+    images: ['divine-feminine-02', ...group('divine-feminine').filter((id) => id !== 'divine-feminine-02')],
     credits: [['Photography', 'Amilcar'], ['Styling', 'Storm Nijhuis'], ['Model', 'Louise Aniba']],
   },
   {
