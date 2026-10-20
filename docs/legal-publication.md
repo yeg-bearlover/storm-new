@@ -69,7 +69,7 @@ personal data and must be assessed. A YouTube privacy-enhanced URL alone is not
 a substitute for that assessment or consent where required.
 
 The Accessibility page describes available controls, known image-description
-limitations and help by email/telephone. WCAG 2.2 AA is a target; no independent
+limitations and help by email. WCAG 2.2 AA is a target; no independent
 conformance audit has been claimed. Review the complete experience with keyboard,
 screen reader, magnification and reduced motion, including the downloadable CV.
 The European Accessibility Act applies to specified services, not every private
