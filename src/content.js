@@ -19,7 +19,7 @@ export const stylingProjects = [
     credits: [['Photography', 'Amilcar'], ['Styling', 'Storm Nijhuis'], ['Model', 'Louise Aniba']],
   },
   {
-    id: 'styling-assistance', title: 'Remix Hair Ede', label: 'Styling assistance', role: 'Styling assistance', cover: 'styling-assistance-04',
+    id: 'styling-assistance', title: 'Remix Hair', label: 'Styling assistance', role: 'Styling assistance', cover: 'styling-assistance-04',
     images: ['styling-assistance-04', ...group('styling-assistance').filter((id) => id !== 'styling-assistance-04')],
     credits: [
       ['Styling assistance', 'Storm Nijhuis'],
@@ -88,7 +88,7 @@ export const routes = {
   '/design/hellion/': { title: 'Hellion', description: 'Hellion, a 2026 collection by Storm Nijhuis. The complete lookbook, editorial photography and presentation.' },
   '/design/anima-obscura/': { title: 'Anima Obscura', description: 'Anima Obscura, a 2025 collection by Storm Nijhuis with photography by Denise Bakker. Explore the complete photographic series.' },
   '/design/binhe/': { title: 'Binhe', description: 'Binhe, a couture collection developed with artisans and partners in Mexico. Design assistance and product design by Storm Nijhuis for Zyanya Keizer.' },
-  '/styling/': { title: 'Styling', description: 'Divine Feminine, Remix Hair Ede and internship work with Annet Veerbeek. Styling and styling assistance by Storm Nijhuis.' },
+  '/styling/': { title: 'Styling', description: 'Divine Feminine, Remix Hair and internship work with Annet Veerbeek. Styling and styling assistance by Storm Nijhuis.' },
   '/creative-direction/': { title: 'Hellion, a short fashion film', description: 'Hellion, an upcoming short fashion film based on Storm Nijhuis’s collection. A rebellious outsider challenges religious judgement in an otherworldly church.' },
   '/about/': { title: 'About', description: 'Meet Storm Nijhuis. Fashion designer, stylist, creative director and Lichting finalist based in Amsterdam.' },
   '/contact/': { title: 'Contact', description: 'Contact Storm Nijhuis for fashion design, styling, creative direction and collaborations.' },

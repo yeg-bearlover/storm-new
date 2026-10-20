@@ -21,7 +21,7 @@ Built with **vanilla JavaScript, CSS and Vite**, with nine portfolio pages and f
 | `/design/hellion/` | The 2026 collection, a seven-look lookbook, editorial archive and presentation photographs. |
 | `/design/anima-obscura/` | A 2025 collection by Storm Nijhuis, photographed by Denise Bakker, with its complete archive and credits. |
 | `/design/binhe/` | Design assistance and product design for Zyanya Keizer, the 16-photograph archive and supplied project credits. |
-| `/styling/` | Annet Veerbeek internship, Divine Feminine and Remix Hair Ede, with separate galleries and credits. |
+| `/styling/` | Annet Veerbeek internship, Divine Feminine and Remix Hair, with separate galleries and credits. |
 | `/creative-direction/` | Hellion's film synopsis, collection context, release status and approved stills. |
 | `/about/` | Background, education, experience and a downloadable CV. |
 | `/contact/` | Email, both Instagram profiles and the CV download. |
@@ -42,7 +42,7 @@ The galleries include a full-screen photograph viewer with arrow-key navigation,
 
 ### Styling projects
 
-![Homepage preview with Annet Veerbeek, Divine Feminine and Remix Hair Ede](docs/preview-styling-projects.png)
+![Homepage preview with Annet Veerbeek, Divine Feminine and Remix Hair](docs/preview-styling-projects.png)
 
 ### Binhe
 
@@ -159,7 +159,7 @@ The current selections are intentional:
 - **Hellion editorial:** 45 photographs across the two supplied series.
 - **Anima Obscura:** 28 photographs.
 - **Binhe:** all 16 photographs, with Storm credited for design assistance and product design for Zyanya Keizer.
-- **Styling:** 29 photographs: 15 from the Annet Veerbeek internship, 10 from Divine Feminine and four from Remix Hair Ede.
+- **Styling:** 29 photographs: 15 from the Annet Veerbeek internship, 10 from Divine Feminine and four from Remix Hair.
 - **Film:** all 13 approved stills.
 
 Preserve complete frames and image proportions when changing layouts. Portrait and landscape archives are grouped separately; CSS filters and forced `object-fit: cover` crops are rejected by validation.
