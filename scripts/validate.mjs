@@ -60,6 +60,14 @@ for (const id of binhe.images) assert.equal((binhePage.match(new RegExp(`data-vi
 for (const [, credit] of binhe.credits) assert(binhePage.includes(credit));
 for (const path of ['/', '/design/']) assert(renderPage(path).includes('href="/design/binhe/"'), 'Include Binhe in both design selections.');
 
+for (const [path, count, remaining] of [['/design/hellion/', 12, 33], ['/design/anima-obscura/', 12, 16], ['/design/binhe/', 11, 5]]) {
+  const page = renderPage(path);
+  const selection = path === '/design/hellion/' ? page.match(/<section class="editorial-section section-pad">([\s\S]*?)<\/section>/)[1] : page;
+  const beforeArchive = selection.split('<details class="archive-details">')[0];
+  assert.equal((beforeArchive.match(/data-viewer="/g) || []).length, count, `Show an expanded selection before the archive: ${path}`);
+  assert(page.includes(`Show ${remaining} more photographs`), `Describe the actual number of additional photographs: ${path}`);
+}
+
 for (const asset of assets.values()) {
   for (const size of ['large', 'medium', 'small']) {
     await access(`public${asset[size].src}`);

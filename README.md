@@ -31,10 +31,14 @@ Built with **vanilla JavaScript, CSS and Vite**, with nine portfolio pages and f
 | `/accessibility/` | Accessibility features, keyboard controls, limitations and help. |
 | `/terms/` | Enquiries, commission agreements and consumer cancellation information. |
 
-The galleries include a full-screen photograph viewer with arrow-key navigation, swipe gestures and drag-down dismissal. The Hellion lookbook lets visitors move between seven looks, each with four views. Expandable archives keep complete photographic series accessible alongside the featured selections.
+The galleries include a full-screen photograph viewer with arrow-key navigation, swipe gestures and drag-down dismissal. The Hellion lookbook lets visitors move between seven looks, each with four views. Expandable archives keep complete photographic series accessible alongside larger featured selections: 12 Hellion editorials, 12 Anima Obscura photographs and 11 Binhe photographs including their opening images. Each disclosure states exactly how many more photographs it reveals.
 
 <details>
 <summary>More screenshots</summary>
+
+### Archive controls
+
+![Plain-text archive action showing 33 more photographs on mobile](docs/preview-archive-mobile.png)
 
 ### Styling projects
 
@@ -42,7 +46,7 @@ The galleries include a full-screen photograph viewer with arrow-key navigation,
 
 ### Binhe
 
-![Binhe project with the seated portrait beside About the collection](docs/preview-binhe.png)
+![Binhe project with the front-facing standing portrait beside About the collection](docs/preview-binhe.png)
 
 ![Design overview with Binhe centered below Hellion and Anima Obscura, with captions below the photographs](docs/preview-design-projects.png)
 
@@ -51,6 +55,8 @@ The galleries include a full-screen photograph viewer with arrow-key navigation,
 ![Hellion editorial photograph 26, series two, beside the collection introduction](docs/preview-hellion.png)
 
 ### About
+
+![Experience and education updated from the supplied two-page CV](docs/preview-experience.png)
 
 ![About page preview](docs/preview-about.png)
 
