@@ -2,11 +2,11 @@
 
 **Fashion design · Styling · Creative direction**
 
-A personal portfolio for Storm Nijhuis, an Amsterdam-based fashion designer, stylist and creative director. The site brings together the **Hellion** collection, **Anima Obscura**, styling work and an upcoming short fashion film.
+A personal portfolio for Storm Nijhuis, an Amsterdam-based fashion designer, stylist and creative director. The site brings together the **Hellion** collection, **Anima Obscura**, the **Binhe** design collaboration, styling work and an upcoming short fashion film.
 
 The visual language follows the work: a black editorial canvas, oversized Koch=Schrift typography and generous space for photography. Images retain their original colours and full compositions, from sculptural garment silhouettes to film stills.
 
-Built with **vanilla JavaScript, CSS and Vite**, with eight portfolio pages and five information pages pre-rendered to static HTML.
+Built with **vanilla JavaScript, CSS and Vite**, with nine portfolio pages and five information pages pre-rendered to static HTML.
 
 ![Storm Nijhuis homepage with the Koch=Schrift masthead, biography and collection presentation photograph](docs/preview-desktop.png)
 
@@ -17,10 +17,11 @@ Built with **vanilla JavaScript, CSS and Vite**, with eight portfolio pages and 
 | Route | What you will find |
 | --- | --- |
 | `/` | Personal introduction and selected design, styling and film work. |
-| `/design/` | An overview of Hellion and Anima Obscura. |
+| `/design/` | An overview of Hellion, Anima Obscura and Binhe. |
 | `/design/hellion/` | The 2026 collection, a seven-look lookbook, editorial archive and presentation photographs. |
 | `/design/anima-obscura/` | A fashion editorial made with Denise Bakker, its photographic archive and project credits. |
-| `/styling/` | Styling assistance during the Annet Veerbeek internship, presented as one gallery. |
+| `/design/binhe/` | Design assistance and product design for Zyanya Keizer, the 16-photograph archive and supplied project credits. |
+| `/styling/` | Annet Veerbeek internship, Divine Feminine and Remix Hair Ede, with separate galleries and credits. |
 | `/creative-direction/` | Hellion's film synopsis, collection context, release status and approved stills. |
 | `/about/` | Background, education, experience and a downloadable CV. |
 | `/contact/` | Direct email, telephone, Instagram and CV links. |
@@ -34,6 +35,14 @@ The galleries include a full-screen photograph viewer with arrow-key navigation,
 
 <details>
 <summary>More screenshots</summary>
+
+### Styling projects
+
+![Homepage preview with Annet Veerbeek, Divine Feminine and Remix Hair Ede](docs/preview-styling-projects.png)
+
+### Binhe
+
+![Binhe project with the selected headpiece photograph and Storm's design assistance role](docs/preview-binhe.png)
 
 ### About
 
@@ -112,13 +121,13 @@ storm-new/
 | Change | Where to edit |
 | --- | --- |
 | Homepage biography | `homeBiography` in `src/content.js` |
-| Project groups and lookbook selection | Group exports and `looks` in `src/content.js` |
+| Project groups, styling credits, Binhe copy and lookbook selection | Group exports, `stylingProjects`, `binhe` and `looks` in `src/content.js` |
 | Film synopsis, still order and release status | `film` in `src/content.js` |
 | Email, telephone and Instagram | `contact` in `src/content.js` |
 | Business identification, retention and privacy confirmations | `src/legal.js` and [legal publication notes](docs/legal-publication.md) |
 | Page titles and descriptions | `routes` in `src/content.js` |
 | Page copy, credits, featured images and composition | `src/templates.js` |
-| Image alt text and viewer descriptions | `imageDescriptions` and `description()` in `src/templates.js` |
+| Image alt text and viewer descriptions | Manifest `alt` fields, `imageDescriptions` and `description()` in `src/templates.js` |
 | Typography, spacing, colours and motion | `src/styles.css` |
 | Downloadable CV | `public/assets/storm-nijhuis-cv.pdf` |
 
@@ -126,19 +135,20 @@ To add a page, register its metadata in `routes` in `src/content.js`, add its re
 
 ### Photography and assets
 
-The manifest tracks **149 source photographs**, each with a `small` and `large` WebP derivative. Entries record the original filename, SHA-256 hash, source dimensions and derivative paths and dimensions. `picture()` generates responsive `srcset` markup, explicit image dimensions and alt text; images are lazy-loaded unless marked eager.
+The manifest tracks **179 source photographs**, each with `small`, `medium` and `large` WebP derivatives. Entries record the original filename, SHA-256 hash, source dimensions and derivative paths and dimensions. `picture()` generates responsive `srcset` markup, explicit image dimensions and alt text; images are lazy-loaded unless marked eager.
 
 The current selections are intentional:
 
 - **Hellion lookbook:** 28 photographs across seven displayed looks, numbered `01–07`. These retain source sets `01–05`, `07` and `09`; source sets `06` and `08` remain omitted from the lookbook. All 36 source lookbook entries remain in the manifest.
 - **Hellion editorial:** 45 photographs across the two supplied series.
 - **Anima Obscura:** 28 photographs.
-- **Styling:** 15 photographs in the Annet Veerbeek internship gallery.
+- **Binhe:** all 16 photographs, with Storm credited for design assistance and product design for Zyanya Keizer.
+- **Styling:** 29 photographs: 15 from the Annet Veerbeek internship, 10 from Divine Feminine and four from Remix Hair Ede.
 - **Film:** all 13 approved stills.
 
 Preserve complete frames and image proportions when changing layouts. Portrait and landscape archives are grouped separately; CSS filters and forced `object-fit: cover` crops are rejected by validation.
 
-Image derivatives are already supplied. The repository does not include an image-processing command: when adding photography, prepare both WebP sizes, add a manifest entry and update the relevant content group and description. The build copies everything in `public/` into the published output, so that directory should contain only approved public material.
+Image derivatives are already supplied. The repository does not include an image-processing command: when adding photography, prepare all three WebP sizes, add a manifest entry and update the relevant content group and description. The build copies everything in `public/` into the published output, so that directory should contain only approved public material.
 
 ### Release the film
 
@@ -162,7 +172,7 @@ pnpm preview
 
 **Use `pnpm build` for production.** Running Vite's build command directly skips the repository's validation and static page generation.
 
-The build produces thirteen website pages, a `/404/index.html` page and a root `404.html`, alongside the bundled JavaScript, CSS and public assets:
+The build produces fourteen website pages, a `/404/index.html` page and a root `404.html`, alongside the bundled JavaScript, CSS and public assets:
 
 ```text
 dist/
@@ -170,7 +180,8 @@ dist/
 ├── design/
 │   ├── index.html
 │   ├── hellion/index.html
-│   └── anima-obscura/index.html
+│   ├── anima-obscura/index.html
+│   └── binhe/index.html
 ├── styling/index.html
 ├── creative-direction/index.html
 ├── about/index.html
@@ -207,7 +218,7 @@ Asset and navigation URLs are root-relative, so deployment beneath a subdirector
 
 - Lookbook selection, consecutive displayed numbering and four views per look.
 - Expected gallery counts and inclusion of every approved film still.
-- Existence and aspect ratios of both image derivatives.
+- Existence and aspect ratios of all three image derivatives.
 - Valid internal links, viewer image references and one main heading per route.
 - Selected homepage, About and film images, plus specific editorial copy decisions.
 - The current restriction on unreleased playback and selected private-source file types.
@@ -233,6 +244,6 @@ Accessibility support includes semantic headings, a skip link, visible focus sty
 
 [Design notes](docs/design-notes.md) document the photographic selections, motion rules, content decisions and details still awaiting confirmation, including film credits and styling dates.
 
-The supplied **Koch=Schrift** webfont provides the signature display typography. Body and interface text use Helvetica Neue, Helvetica and Arial fallbacks; RB Campton Neue has not been supplied. Project credits are recorded in the page templates and design notes.
+The supplied **Koch=Schrift** webfont provides the signature display typography. Body and interface text use Helvetica Neue, Helvetica and Arial fallbacks; RB Campton Neue has not been supplied. Project credits are recorded in the content data, page templates and design notes.
 
 There is currently no `LICENSE` file in this repository. No open-source or media reuse licence is specified.

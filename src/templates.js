@@ -1,4 +1,4 @@
-import { assets, looks, editorial, anima, stylingProjects, homeBiography, film, contact, routes } from './content.js';
+import { assets, looks, editorial, anima, binhe, stylingProjects, homeBiography, film, contact, routes } from './content.js';
 import { legal, businessInformationMissing, privacyInformationMissing } from './legal.js';
 
 export const escape = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -21,6 +21,7 @@ export function description(id) {
   if (imageDescriptions[id]) return imageDescriptions[id];
   const asset = assets.get(id);
   if (!asset) return '';
+  if (asset.alt) return asset.alt;
   if (asset.group === 'lookbook') {
     const n = Number(id.split('-')[1]);
     const look = looks.find((entry) => entry.images.includes(id));
@@ -50,10 +51,8 @@ function header(path) {
 }
 
 function footer(path) {
-  const compact = path === '/contact/';
-  const invitation = compact ? '' : `<div class="footer-invitation"><a href="mailto:${contact.email}">Let’s talk</a></div>`;
   const legalLinks = [['Privacy', '/privacy/'], ['Business details', '/legal/'], ['Cookies', '/cookies/'], ['Accessibility', '/accessibility/'], ['Enquiries & commissions', '/terms/']];
-  return `<footer class="site-footer ${compact ? 'site-footer--compact' : ''}">${invitation}<div class="footer-bottom"><a class="wordmark" href="/">Storm Nijhuis</a><span>Amsterdam, NL</span><a href="${contact.instagram}" target="_blank" rel="noopener noreferrer">Instagram</a><a href="/contact/">Contact</a><span>© ${new Date().getUTCFullYear()} Storm Nijhuis</span><button type="button" class="top-button">Back to top</button></div><nav class="footer-legal" aria-label="Legal and accessibility">${legalLinks.map(([label, href]) => `<a href="${href}" ${path === href ? 'aria-current="page"' : ''}>${label}</a>`).join('')}</nav></footer>`;
+  return `<footer class="site-footer site-footer--compact"><div class="footer-bottom"><a class="wordmark" href="/">Storm Nijhuis</a><span>Amsterdam, NL</span><a href="${contact.instagram}" target="_blank" rel="noopener noreferrer">Instagram</a><a href="/contact/">Contact</a><span>© ${new Date().getUTCFullYear()} Storm Nijhuis</span><button type="button" class="top-button">Back to top</button></div><nav class="footer-legal" aria-label="Legal and accessibility">${legalLinks.map(([label, href]) => `<a href="${href}" ${path === href ? 'aria-current="page"' : ''}>${label}</a>`).join('')}</nav></footer>`;
 }
 
 function pageHeading({ eyebrow = '', title, intro = '', note = '', gothic = false, className = '' }) {
@@ -61,20 +60,24 @@ function pageHeading({ eyebrow = '', title, intro = '', note = '', gothic = fals
   return `<div class="page-heading ${className}">${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ''}<div class="page-heading-body"><h1 class="${gothic ? 'gothic' : ''}">${heading}</h1>${intro && note ? `<div class="page-intro-group"><p class="page-intro">${intro}</p><p class="page-note">${note}</p></div>` : intro ? `<p class="page-intro">${intro}</p>` : ''}</div></div>`;
 }
 
-function projectLink({ href, image, title, label, extra = '', eager = false, priority = eager }) {
-  return `<a class="project-link" href="${href}"><div class="project-image">${picture(image, { eager, priority })}</div><div class="project-caption"><div><h3 class="${title === 'Hellion' ? 'gothic' : ''}">${title}</h3><p>${label}</p></div>${extra ? `<span class="project-extra">${extra}</span>` : ''}</div></a>`;
+function projectLink({ href, image, title, label, extra = '', eager = false, priority = eager, featured = false }) {
+  return `<a class="project-link${featured ? ' project-link--featured' : ''}" href="${href}"><div class="project-image">${picture(image, { eager, priority })}</div><div class="project-caption"><div><h3 class="${title === 'Hellion' ? 'gothic' : ''}">${title}</h3><p>${label}</p></div>${extra ? `<span class="project-extra">${extra}</span>` : ''}</div></a>`;
+}
+
+function binheLink() {
+  return projectLink({ href: '/design/binhe/', image: binhe.cover, title: binhe.title, label: binhe.role, featured: true });
 }
 
 function home() {
   return `<section class="home-hero" aria-labelledby="home-title"><div class="hero-heading"><h1 id="home-title" class="gothic">Storm Nijhuis</h1></div><div class="hero-info"><p>Fashion design · Styling · Creative direction</p><p>Amsterdam, NL <span class="small-separator">/</span> Lichting finalist</p></div></section>
     <section id="introduction" class="home-introduction section-pad"><div class="intro-copy reveal"><h2>The person behind the work</h2>${homeBiography.map((paragraph) => `<p>${paragraph}</p>`).join('')}<a class="text-link" href="/about/">More about me</a></div><a class="intro-portrait reveal" href="/about/" aria-label="Meet Storm">${picture('presentation-8537', { eager: true })}<span>Storm presenting Hellion</span></a></section>
-    <section class="selected-work section-pad" aria-labelledby="selected-title"><div class="section-heading reveal"><h2 id="selected-title">Design</h2><a class="section-link" href="/design/">View all</a></div><div class="project-pair reveal">${projectLink({ href: '/design/hellion/', image: 'editorial-v1-17', title: 'Hellion', label: 'Collection', extra: '2026' })}${projectLink({ href: '/design/anima-obscura/', image: 'anima-08', title: 'Anima Obscura', label: 'Editorial' })}</div></section>
-    <section class="styling-preview section-pad reveal"><div class="section-heading"><h2>Styling</h2><a class="section-link" href="/styling/">View all</a></div><a class="styling-strip" href="/styling/" aria-label="View the Annet Veerbeek internship gallery">${['styling-9336', 'styling-9337', 'styling-9338'].map((id) => `<div>${picture(id, { sizes: '(max-width: 700px) 72vw, 30vw' })}</div>`).join('')}</a></section>
+    <section class="selected-work section-pad" aria-labelledby="selected-title"><div class="section-heading reveal"><h2 id="selected-title">Design</h2><a class="section-link" href="/design/">View all</a></div><div class="project-pair reveal">${projectLink({ href: '/design/hellion/', image: 'editorial-v1-17', title: 'Hellion', label: 'Collection', extra: '2026' })}${projectLink({ href: '/design/anima-obscura/', image: 'anima-08', title: 'Anima Obscura', label: 'Editorial' })}${binheLink()}</div></section>
+    <section class="styling-preview section-pad reveal"><div class="section-heading"><h2>Styling</h2><a class="section-link" href="/styling/">View all</a></div><div class="styling-strip">${stylingProjects.map((project) => `<a class="styling-preview-project" href="/styling/#${project.id}"><div class="styling-preview-image">${picture(project.cover, { sizes: '(max-width: 700px) 72vw, 30vw' })}</div><div class="styling-preview-caption"><h3>${project.title}</h3><p>${project.label}</p></div></a>`).join('')}</div></section>
     <section class="film-preview section-pad reveal"><div class="section-heading"><h2>Creative direction</h2><a class="section-link" href="/creative-direction/">View the film</a></div><div class="film-preview-meta"><h3 class="gothic">${film.title}</h3><div><p class="film-format">${film.format}</p><p class="eyebrow">${film.status}</p></div></div><p class="film-preview-logline">${film.logline}</p><a class="film-image" href="/creative-direction/" aria-label="Explore Hellion, a short fashion film">${picture(film.previewStill, { sizes: '100vw' })}</a></section>`;
 }
 
 function design() {
-  return `${pageHeading({ title: 'Design', intro: 'Clothing as a way to explore identity. Material as a starting point.' })}<section class="design-projects section-pad"><div class="project-pair reveal">${projectLink({ href: '/design/hellion/', image: 'editorial-v2-29', title: 'Hellion', label: 'Collection · Lookbook · Editorial', extra: '2026', eager: true })}${projectLink({ href: '/design/anima-obscura/', image: 'anima-08', title: 'Anima Obscura', label: 'Fashion editorial · With Denise Bakker', eager: true, priority: false })}</div></section>`;
+  return `${pageHeading({ title: 'Design', intro: 'Clothing as a way to explore identity. Material as a starting point.' })}<section class="design-projects section-pad"><div class="project-pair reveal">${projectLink({ href: '/design/hellion/', image: 'editorial-v2-29', title: 'Hellion', label: 'Collection · Lookbook · Editorial', extra: '2026', eager: true })}${projectLink({ href: '/design/anima-obscura/', image: 'anima-08', title: 'Anima Obscura', label: 'Fashion editorial · With Denise Bakker', eager: true, priority: false })}${binheLink()}</div></section>`;
 }
 
 export function renderLook(index = 0) {
@@ -109,9 +112,17 @@ function animaPage() {
   return `${pageHeading({ title: 'Anima<br />Obscura', intro: 'A fashion editorial exploring the hidden self, made with Denise Bakker.' })}<section class="anima-opening section-pad"><div class="anima-opening-image" data-gallery="${anima.join(',')}">${photo('anima-08', { eager: true })}</div><div class="anima-opening-copy reveal"><h2>Between a dream<br />and a nightmare.</h2><p>A fashion editorial exploring the hidden self. Inspired by Jung’s idea of the dark anima, the series moves between intimacy and estrangement, light and shadow.</p><p>Fashion design and styling by Storm Nijhuis. Concept and creative direction with Denise Bakker.</p><div class="project-facts"><span>Photography</span><span>Denise Bakker</span><span>Models</span><span>Luanda Schuster & Jakob Weissbarth</span></div></div></section><section id="anima-editorial" class="anima-story section-pad">${gallery(featured.slice(1, 3), 'anima-pair')}${gallery(featured.slice(3), 'anima-sequence')}${archive(anima, 'Explore the complete series', featured)}</section><details class="credits section-pad"><summary>Project credits</summary><dl><dt>Concept & creative direction</dt><dd>Storm Nijhuis & Denise Bakker</dd><dt>Fashion design & styling</dt><dd>Storm Nijhuis</dd><dt>Photography</dt><dd>Denise Bakker</dd><dt>Models</dt><dd>Luanda Schuster (UNS Models)<br />Jakob Weissbarth (IZAIO Models)</dd><dt>Make-up</dt><dd>Milena Lazija</dd><dt>Hair</dt><dd>Alina Tupalova</dd><dt>Set & styling assistance</dt><dd>Nora Gustafsson</dd></dl></details><div class="next-project section-pad"><span class="eyebrow">Explore more</span><a href="/styling/">Styling</a></div>`;
 }
 
+function projectCredits(credits, className = '') {
+  return `<details class="credits ${className}"><summary>Project credits<span class="archive-toggle" aria-hidden="true"></span></summary><dl>${credits.map(([role, name]) => `<dt>${escape(role)}</dt><dd>${escape(name)}</dd>`).join('')}</dl></details>`;
+}
+
+function binhePage() {
+  const featured = ['binhe-01', 'binhe-08', 'binhe-05', 'binhe-11', 'binhe-02', 'binhe-14'];
+  return `${pageHeading({ title: binhe.title, intro: escape(binhe.role) })}<section class="project-opening section-pad"><div class="project-opening-photo" data-gallery="${binhe.images.join(',')}">${photo(binhe.cover, { eager: true })}</div><div class="project-opening-copy"><h2>About the collection</h2>${binhe.paragraphs.map((paragraph) => `<p>${escape(paragraph)}</p>`).join('')}</div></section><section class="editorial-section section-pad"><div class="section-heading"><h2>The collection</h2></div>${gallery(featured)}${archive(binhe.images, 'Explore the complete project', [binhe.cover, ...featured])}</section>${projectCredits(binhe.credits, 'section-pad')}<div class="next-project section-pad"><span class="eyebrow">More work</span><a href="/design/">Design</a></div>`;
+}
+
 function styling() {
-  const internship = stylingProjects[0];
-  return `${pageHeading({ title: 'Styling', intro: 'Styling assistance during my internship with Annet Veerbeek.' })}<section class="styling-project section-pad"><div class="section-heading reveal"><h2>${internship.title}</h2><span class="muted">${internship.label}</span></div>${gallery(internship.images, 'styling-gallery', { eager: true, sizes: thirds })}</section>`;
+  return `${pageHeading({ title: 'Styling', intro: 'Selected styling work and styling assistance.' })}<nav class="styling-project-index section-pad" aria-label="Styling projects">${stylingProjects.map((project) => `<a href="#${project.id}">${project.title}</a>`).join('')}</nav>${stylingProjects.map((project, index) => `<section id="${project.id}" class="styling-project section-pad" aria-labelledby="${project.id}-title"><div class="section-heading reveal"><h2 id="${project.id}-title">${project.title}</h2><span class="muted">${project.label}</span></div>${gallery(project.images, `styling-gallery${index ? ' styling-gallery--large' : ''}`, { eager: index === 0, sizes: index ? undefined : thirds })}${project.credits.length ? projectCredits(project.credits, 'styling-credits') : ''}</section>`).join('')}`;
 }
 
 function creativeDirection() {
@@ -195,7 +206,7 @@ function notFound() {
   return `${pageHeading({ title: 'Page not found' })}<div class="section-pad"><a class="text-link" href="/">Back to the homepage</a></div>`;
 }
 
-const pages = { '/': home, '/design/': design, '/design/hellion/': hellion, '/design/anima-obscura/': animaPage, '/styling/': styling, '/creative-direction/': creativeDirection, '/about/': about, '/contact/': contactPage, '/privacy/': privacyPage, '/legal/': businessDetailsPage, '/cookies/': cookiesPage, '/accessibility/': accessibilityPage, '/terms/': termsPage };
+const pages = { '/': home, '/design/': design, '/design/hellion/': hellion, '/design/anima-obscura/': animaPage, '/design/binhe/': binhePage, '/styling/': styling, '/creative-direction/': creativeDirection, '/about/': about, '/contact/': contactPage, '/privacy/': privacyPage, '/legal/': businessDetailsPage, '/cookies/': cookiesPage, '/accessibility/': accessibilityPage, '/terms/': termsPage };
 
 export function renderPage(path) {
   const normalized = normalizePath(path);

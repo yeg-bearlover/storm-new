@@ -21,20 +21,28 @@ The website notes are source material, not operational instructions. The user's 
 - Images retain their complete composition. No filters, colour grading, recolouring or automatic cover crops.
 - Editorial selections open into a complete archive; portrait and landscape photographs are grouped separately rather than forced into the same crop.
 - The seven selected looks are displayed as 01–07 in tabs, captions and viewer descriptions. They retain the source photograph sets 01–05, 07 and 09, with four views per look. Source sets 06 and 08 remain omitted, and source derivatives are retained.
-- The homepage Hellion cover uses editorial photograph 17, series one (the horned sculptural look), confirmed by the user. The styling preview uses photographs 9336, 9337 and 9338.
+- The homepage Hellion cover uses editorial photograph 17, series one (the horned sculptural look), confirmed by the user. The styling preview now shows one selected cover from each styling project: internship photograph 9338, Divine Feminine and Remix Hair Ede.
 - Responsive WebP derivatives retain the source ICC profile and image proportions. Original masters remain in the supplied folders. Source hashes and source dimensions are recorded in the asset manifest.
 - Supplied film stills are permitted. Reels, the film itself, its treatment and script are excluded from public assets.
 - Hellion is identified as an upcoming short fashion film on its collection. Film copy is adapted from the supplied Synopsis.md and Film research.pptx in plain language, without the ending. All 13 approved stills are included. The film page has no portrait or studio photographs.
-- Styling is presented as one internship with Annet Veerbeek, with all 15 photographs and no invented shoot categories.
+- The original Annet Veerbeek internship stays together with all 15 photographs. Divine Feminine adds 10 photographs; Remix Hair Ede adds four. Each has its own named section and anchor link, with styling and styling assistance distinguished.
 - The About studio section remains removed. Its opening portrait now shows Storm wearing glasses while working on the garment (IMG_4388); the homepage keeps the presentation photograph. Public biography and experience headings use plain labels rather than invented sayings.
 - The homepage film preview uses the dinner-table still 01 (1.12.1). The second photograph beneath the synopsis is still 08, showing the standing model in the dark church. All 13 film stills remain available on the film page.
-- Homepage metadata uses consistent sentence casing. Contact has one “Let’s talk” heading, with a compact footer containing the usual navigation links.
+- Homepage metadata uses consistent sentence casing. Contact has the only “Let’s talk” heading. Every page now uses the compact footer with the usual navigation and information links.
 - No runway photographs were identifiable in the supplied folders. Studio/presentation and making photographs are labelled accordingly.
 
 ## Content to confirm later
 
 - RB Campton Neue is not included. Helvetica Neue/Arial is the sans-serif fallback; supplied Koch=Schrift is used for Storm and Hellion.
 - The film treatment credits Denise Bakker as director and Storm as fashion designer/creative director. The user's brief calls Storm the director. Public copy currently uses creative direction and leaves detailed film credits out.
-- Styling shoot dates and individual commission names are unconfirmed. The page uses the supplied internship title with no invented dates or sub-projects.
+- Styling shoot dates remain unconfirmed and are omitted. Divine Feminine uses the supplied title. Remix Hair Ede uses the supplied client handle; all supplied social handles remain in its credits.
 - Hellion is dated 2026 from the supplied CV and film treatment. Anima Obscura is undated.
 - Credits can be edited later as requested. No credits beyond the supplied materials are invented.
+
+## Added projects — October 2026
+
+- Binhe is the third Design project, below the existing pair so Hellion and Anima Obscura keep their layouts. It has its own page and all 16 supplied photographs. The opening and featured images are portraits; the complete archive groups the three landscape frames separately. Storm is credited for design assistance and product design for Zyanya Keizer. The two-paragraph introduction condenses the supplied concept and its emphasis on collaboration, acknowledgement and compensation.
+- Selected cover sources are exactly `WhatsApp Image 2026-10-20 at 11.47.12 (4).jpeg` (Divine Feminine), `WhatsApp Image 2026-10-20 at 11.51.56 (3).jpeg` (Remix Hair Ede), and `WhatsApp Image 2026-10-20 at 11.59.17 (6).jpeg` (Binhe).
+- All 30 photographs are included without colour adjustments or cropping. Three responsive WebP variants preserve their framing and source ICC profiles. Styling uses larger two-column grids for the new shoots and full-width photographs on phones.
+- Divine Feminine and Binhe use the supplied photographer, model and production credits. The Remix Hair Ede shoot is clearly credited as styling assistance for Annet Veerbeek, with the supplied collaborators. Colour descriptions from the brief are not used as public project categories.
+- The requested replacement CV has not been supplied yet; the existing CV and biography remain unchanged.

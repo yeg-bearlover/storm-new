@@ -56,6 +56,9 @@ main:focus{outline:none}
 .project-pair{display:grid;grid-template-columns:1fr 1fr;gap:5vw}
 .project-image{position:relative;overflow:hidden}
 .project-image img{width:100%;height:auto}
+.project-link--featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;margin-top:2vw}
+.project-link--featured .project-caption{padding:24px 0;align-self:center}
+.project-link--featured .project-caption p{font-size:0.8125rem;line-height:1.6;max-width:300px;margin-top:14px}
 .project-caption{display:flex;align-items:center;padding:21px 0;gap:20px;border-bottom:1px solid var(--line)}
 .project-caption h3{font-size:clamp(1.5625rem,2.8vw,2.8125rem);font-weight:500;letter-spacing:-.04em;line-height:1.05}
 .project-caption h3.gothic{font-weight:400;font-size:clamp(2rem,4vw,4rem);line-height:.8;margin-bottom:8px}
@@ -63,15 +66,16 @@ main:focus{outline:none}
 .project-extra{font-size:0.6875rem;letter-spacing:.015em;margin-left:auto;color:var(--muted)}
 .styling-preview{padding-top:35px;padding-bottom:100px}
 .styling-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2vw;align-items:start}
-.styling-strip>div{aspect-ratio:1/1.3;display:flex;align-items:center;background:#0d0d0d}
+.styling-preview-image{aspect-ratio:1/1.3;display:flex;align-items:center;background:#0d0d0d}
 .styling-strip img{width:100%;height:100%;object-fit:contain}
+.styling-preview-caption{padding:18px 0;border-bottom:1px solid var(--line)}
+.styling-preview-caption h3{font-size:1rem;font-weight:500;line-height:1.4}
+.styling-preview-caption p{font-size:0.75rem;letter-spacing:.015em;line-height:1.6;color:var(--muted);margin-top:5px}
 .film-preview{padding-top:40px;padding-bottom:130px}
 .film-image{display:block}
 .site-footer{padding:75px var(--gutter) calc(24px + var(--safe-b));border-top:1px solid var(--line)}
 .site-footer.site-footer--compact{padding-top:24px}
 .site-footer--compact .footer-bottom{border-top:0;padding-top:0}
-.footer-invitation{display:flex;justify-content:space-between;align-items:center;padding-bottom:70px}
-.footer-invitation>a{font-size:clamp(2.8125rem,7vw,6.875rem);font-weight:500;letter-spacing:-.055em;line-height:1.1}
 .footer-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:0.6875rem;letter-spacing:.015em}
 .footer-bottom .wordmark{font-size:1.5rem}
 .footer-bottom>span{color:var(--muted)}
@@ -144,7 +148,7 @@ summary::-webkit-details-marker{display:none}
 .archive-count{font-size:0.6875rem;letter-spacing:.015em;color:var(--muted);margin-left:auto}
 .archive-toggle{font-size:0.75rem;letter-spacing:.015em;color:var(--muted);min-width:34px;text-align:right}
 .archive-toggle:before{content:'Show'}
-.archive-details[open] .archive-toggle:before{content:'Hide'}
+.archive-details[open] .archive-toggle:before,.credits[open] .archive-toggle:before{content:'Hide'}
 .archive-body{padding:25px 0 45px}
 .archive-grid{grid-template-columns:repeat(3,1fr);gap:24px}
 .archive-grid>figure:nth-child(even){margin-top:0}
@@ -171,9 +175,14 @@ summary::-webkit-details-marker{display:none}
 .credits dt{color:var(--muted)}
 .credits dd{margin:0}
 .credits[open] dl{animation:fade-in 220ms ease}
+.styling-project-index{display:flex;flex-wrap:wrap;gap:12px 32px;margin-bottom:65px}
+.styling-project-index a{font-size:0.8125rem;line-height:1.6;padding:10px 0;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--line)}
 .styling-project{padding-top:10px;padding-bottom:100px}
 .styling-gallery{grid-template-columns:repeat(3,1fr);gap:24px}
 .styling-gallery>figure:nth-child(even){margin-top:0}
+.styling-gallery--large{grid-template-columns:1fr 1fr;gap:4vw}
+.styling-credits{padding-bottom:0;margin-top:38px}
+.styling-credits dd{overflow-wrap:anywhere}
 .film-project{--film-space:clamp(64px,7vw,104px);padding-bottom:120px}
 .film-project-description{display:grid;grid-template-columns:1fr 1fr;gap:8vw;padding:var(--film-space) 0}
 .film-project-description h2,.film-concept h2,.film-stills-heading{font-size:clamp(1.5rem,2.6vw,2.5rem);line-height:1.15;letter-spacing:-.03em;font-weight:500}
@@ -279,16 +288,15 @@ summary::-webkit-details-marker{display:none}
   .section-heading>.text-link{font-size:0.6875rem;letter-spacing:.015em;gap:12px;padding:7px 0}
   .section-heading>.muted{font-size:0.6875rem;letter-spacing:.015em;grid-column:1/-1}
   .project-pair{grid-template-columns:1fr;gap:50px}
+  .project-link--featured{display:block;margin-top:0}
   .project-caption{gap:14px;padding:19px 0}
   .project-caption h3{font-size:1.75rem}
   .project-caption h3.gothic{font-size:2.6875rem}
   .styling-preview{padding-top:10px;padding-bottom:65px}
   .styling-strip{grid-auto-flow:column;grid-auto-columns:78%;grid-template-columns:none;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;padding-bottom:12px}
-  .styling-strip>div{scroll-snap-align:start}
+  .styling-strip>a{scroll-snap-align:start}
   .film-preview{padding-top:20px;padding-bottom:75px}
   .site-footer{padding-top:50px;padding-bottom:calc(25px + var(--safe-b))}
-  .footer-invitation{display:block;padding-bottom:45px}
-  .footer-invitation>a{font-size:3.875rem}
   .footer-bottom{display:grid;grid-template-columns:1fr 1fr;gap:20px 12px;font-size:0.6875rem;letter-spacing:.015em;align-items:center}
   .footer-bottom .wordmark{font-size:1.5rem}
   .footer-bottom>span:nth-child(2){text-align:right}
@@ -335,8 +343,10 @@ summary::-webkit-details-marker{display:none}
   .credits dl{grid-template-columns:1fr;gap:8px;font-size:0.75rem;letter-spacing:.015em}
   .credits dd{margin-bottom:15px}
   .styling-project{padding-top:0;padding-bottom:65px}
+  .styling-project-index{gap:4px 24px;margin-bottom:40px}
   .styling-project .section-heading h2{font-size:2rem}
   .styling-gallery{grid-template-columns:1fr 1fr;gap:14px}
+  .styling-gallery--large{grid-template-columns:1fr;gap:25px}
   .styling-gallery>figure:nth-child(even){margin-top:0}
   .film-preview .section-heading h2{font-size:2rem}
   .film-preview-meta{margin-top:25px;gap:18px;align-items:center}
