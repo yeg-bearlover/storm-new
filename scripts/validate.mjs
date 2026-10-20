@@ -22,6 +22,7 @@ for (const [index, name, count] of [[1, 'divine-feminine', 10], [2, 'styling-ass
 assert.equal(assets.get(stylingProjects[1].cover).source, 'storm styling 1.jpg');
 assert.equal(assets.get(stylingProjects[2].cover).source, 'storm styling 2 .jpg');
 assert.equal(assets.get(binhe.cover).source, 'Styling/WhatsApp Image 2026-10-20 at 11.59.17 (6).jpeg');
+assert.equal(assets.get(binhe.openingImage).source, 'Styling/WhatsApp Image 2026-10-20 at 11.59.18 (3).jpeg');
 assert.equal(binhe.images.length, 16);
 assert.deepEqual([...binhe.images].sort(), group('binhe').sort(), 'Include every Binhe photograph once.');
 assert.equal(film.stills.length, 13);
@@ -48,6 +49,7 @@ assert(about.includes('/assets/about-02-large.webp') && !about.includes('/assets
 const contactPage = renderPage('/contact/');
 assert.equal((contactPage.match(/Let’s talk/g) || []).length, 1, 'Show one invitation on Contact.');
 assert(!contactPage.includes('footer-invitation'), 'Remove the repeat Contact footer invitation.');
+assert(contactPage.includes('href="https://www.instagram.com/hellion.sin/"') && contactPage.includes('href="https://www.instagram.com/stormnijhuis/"'), 'Keep both supplied Instagram profiles on Contact.');
 const stylingPage = renderPage('/styling/');
 for (const project of stylingProjects) {
   assert(stylingPage.includes(`id="${project.id}"`), 'Keep project anchor destinations available.');
@@ -83,6 +85,7 @@ for (const path of Object.keys(routes)) {
   assert(html.includes(`data-route="${path}"`));
   assert(pageMeta(path).description.length > 40);
   assert(!/graduation collection/i.test(html), 'Use the Hellion collection title.');
+  assert(!html.includes('tel:') && !html.includes('4001 1837') && !html.includes('40011837'), `Keep the phone number out of website pages: ${path}`);
   assert(!html.includes('footer-invitation'), 'Keep the invitation out of every page footer.');
   if (path !== '/contact/') assert(!html.includes('Let’s talk'), 'Keep Let’s talk on Contact only.');
   assert(!/<video|<iframe/i.test(html), 'No prerelease movie or reels.');

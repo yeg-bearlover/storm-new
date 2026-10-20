@@ -34,8 +34,8 @@ export const binhe = {
   title: 'Binhe',
   role: 'Design assistance & product design for Zyanya Keizer',
   cover: 'binhe-07',
-  openingImage: 'binhe-08',
-  images: ['binhe-08', 'binhe-07', 'binhe-01', 'binhe-09', 'binhe-05', 'binhe-11', 'binhe-02', 'binhe-14', 'binhe-03', 'binhe-06', 'binhe-10', 'binhe-04', 'binhe-16', 'binhe-12', 'binhe-13', 'binhe-15'],
+  openingImage: 'binhe-11',
+  images: ['binhe-11', 'binhe-07', 'binhe-01', 'binhe-09', 'binhe-05', 'binhe-08', 'binhe-02', 'binhe-14', 'binhe-03', 'binhe-06', 'binhe-10', 'binhe-04', 'binhe-16', 'binhe-12', 'binhe-13', 'binhe-15'],
   paragraphs: [
     'Binhe means “seed” in Zapotec. The project draws on Mexican heritage through a couture collection of 13 looks, developed with artisans and partners in Mexico. Palm weaving, Wixarika beadwork, black clay and Tenango embroidery are among the techniques and materials used in the garments.',
     'The process explores how contemporary design can draw on traditional craft through collaboration rather than cultural appropriation. Sharing knowledge, acknowledging the makers and compensating their work are central to the project.',
@@ -78,17 +78,16 @@ export const film = {
 
 export const contact = {
   email: 'storm.nijhuis@gmail.com',
-  phone: '+31 6 4001 1837',
-  telephone: '+31640011837',
   instagram: 'https://www.instagram.com/hellion.sin/',
+  personalInstagram: 'https://www.instagram.com/stormnijhuis/',
 };
 
 export const routes = {
   '/': { title: 'Storm Nijhuis', description: 'Amsterdam-based fashion designer, stylist and creative director. Selected work, collections and film by Storm Nijhuis.' },
   '/design/': { title: 'Design', description: 'Hellion, Anima Obscura and Binhe. Fashion design by Storm Nijhuis, with design assistance and product design for Zyanya Keizer.' },
   '/design/hellion/': { title: 'Hellion', description: 'Hellion, a 2026 collection by Storm Nijhuis. The complete lookbook, editorial photography and presentation.' },
-  '/design/anima-obscura/': { title: 'Anima Obscura', description: 'A fashion editorial by Storm Nijhuis and Denise Bakker. Explore the complete photographic series.' },
-  '/design/binhe/': { title: 'Binhe', description: 'Binhe: design assistance and product design by Storm Nijhuis for Zyanya Keizer. A couture project developed with artisans and partners in Mexico.' },
+  '/design/anima-obscura/': { title: 'Anima Obscura', description: 'Anima Obscura, a 2025 collection by Storm Nijhuis with photography by Denise Bakker. Explore the complete photographic series.' },
+  '/design/binhe/': { title: 'Binhe', description: 'Binhe, a couture collection developed with artisans and partners in Mexico. Design assistance and product design by Storm Nijhuis for Zyanya Keizer.' },
   '/styling/': { title: 'Styling', description: 'Divine Feminine, Remix Hair Ede and internship work with Annet Veerbeek. Styling and styling assistance by Storm Nijhuis.' },
   '/creative-direction/': { title: 'Hellion, a short fashion film', description: 'Hellion, an upcoming short fashion film based on Storm Nijhuis’s collection. A rebellious outsider challenges religious judgement in an otherworldly church.' },
   '/about/': { title: 'About', description: 'Meet Storm Nijhuis. Fashion designer, stylist, creative director and Lichting finalist based in Amsterdam.' },

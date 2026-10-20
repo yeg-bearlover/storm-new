@@ -19,12 +19,12 @@ Built with **vanilla JavaScript, CSS and Vite**, with nine portfolio pages and f
 | `/` | Personal introduction and selected design, styling and film work. |
 | `/design/` | An overview of Hellion, Anima Obscura and Binhe. |
 | `/design/hellion/` | The 2026 collection, a seven-look lookbook, editorial archive and presentation photographs. |
-| `/design/anima-obscura/` | A 2025 fashion editorial made with Denise Bakker, its photographic archive and project credits. |
+| `/design/anima-obscura/` | A 2025 collection by Storm Nijhuis, photographed by Denise Bakker, with its complete archive and credits. |
 | `/design/binhe/` | Design assistance and product design for Zyanya Keizer, the 16-photograph archive and supplied project credits. |
 | `/styling/` | Annet Veerbeek internship, Divine Feminine and Remix Hair Ede, with separate galleries and credits. |
 | `/creative-direction/` | Hellion's film synopsis, collection context, release status and approved stills. |
 | `/about/` | Background, education, experience and a downloadable CV. |
-| `/contact/` | Direct email, telephone, Instagram and CV links. |
+| `/contact/` | Email, both Instagram profiles and the CV download. |
 | `/privacy/` | Enquiry and hosting data, providers, retention and privacy rights. |
 | `/legal/` | Business identification and contact information. |
 | `/cookies/` | Browser storage, hosting security and external services. |
@@ -46,7 +46,7 @@ The galleries include a full-screen photograph viewer with arrow-key navigation,
 
 ### Binhe
 
-![Binhe project with the front-facing standing portrait beside About the collection](docs/preview-binhe.png)
+![Binhe project with the selected white sculptural palm portrait beside About the collection](docs/preview-binhe.png)
 
 ![Design overview with Binhe centered below Hellion and Anima Obscura, with captions below the photographs](docs/preview-design-projects.png)
 
@@ -59,6 +59,10 @@ The galleries include a full-screen photograph viewer with arrow-key navigation,
 ![Experience and education updated from the supplied two-page CV](docs/preview-experience.png)
 
 ![About page preview](docs/preview-about.png)
+
+### Contact
+
+![Contact page with both Instagram profiles and no phone number](docs/preview-contact-mobile.png)
 
 ### Hellion film
 
@@ -135,7 +139,7 @@ storm-new/
 | Homepage biography | `homeBiography` in `src/content.js` |
 | Project groups, styling credits, Binhe copy and lookbook selection | Group exports, `stylingProjects`, `binhe` and `looks` in `src/content.js` |
 | Film synopsis, still order and release status | `film` in `src/content.js` |
-| Email, telephone and Instagram | `contact` in `src/content.js` |
+| Email and Instagram profiles | `contact` in `src/content.js` |
 | Business identification, retention and privacy confirmations | `src/legal.js` and [legal publication notes](docs/legal-publication.md) |
 | Page titles and descriptions | `routes` in `src/content.js` |
 | Page copy, credits, featured images and composition | `src/templates.js` |

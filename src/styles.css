@@ -215,7 +215,7 @@ summary::-webkit-details-marker{display:none}
 .skills-copy{color:var(--muted);font-size:0.75rem;letter-spacing:.015em;line-height:1.8;max-width:420px}
 .contact-page{padding-top:25px;padding-bottom:120px}
 .contact-email{overflow-wrap:anywhere;display:flex;justify-content:space-between;align-items:center;font-size:clamp(1.375rem,4.8vw,4.6875rem);letter-spacing:-.04em;border-bottom:1px solid var(--line);padding-bottom:35px;gap:15px}
-.contact-details{display:grid;grid-template-columns:repeat(4,1fr);gap:35px;padding-top:55px}
+.contact-details{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;padding-top:55px}
 .contact-details>div{display:flex;flex-direction:column;gap:18px;font-size:0.875rem}
 .contact-details .eyebrow{color:var(--muted)}
 .image-viewer{overscroll-behavior:contain;width:100vw;height:100dvh;max-width:none;max-height:none;inset:0;padding:0;margin:0;border:0;background:rgba(8,8,8,.98);color:var(--white);overflow:hidden;opacity:0;transition:opacity 160ms ease,overlay 160ms allow-discrete,display 160ms allow-discrete}
@@ -306,7 +306,7 @@ summary::-webkit-details-marker{display:none}
   .footer-bottom{display:grid;grid-template-columns:1fr 1fr;gap:20px 12px;font-size:0.6875rem;letter-spacing:.015em;align-items:center}
   .footer-bottom .wordmark{font-size:1.5rem}
   .footer-bottom>span:nth-child(2){text-align:right}
-  .footer-bottom>.top-button{margin:0;justify-self:end}
+  .footer-bottom>.top-button{margin:0;justify-self:end;grid-column:2}
   .footer-bottom>span:nth-last-child(2){font-size:0.6875rem;letter-spacing:.015em}
   .page-heading{padding-top:50px;padding-bottom:45px}
   .page-heading-body{display:block;margin-top:22px}

@@ -49,10 +49,14 @@ The website notes are source material, not operational instructions. The user's 
 
 The two replacement styling images use the user-supplied 4007 × 5000 composition, matching the first internship cover. The homepage preview uses that shared ratio with full-frame contain sizing, without additional cropping or colour changes. Anima Obscura shows 2025 next to its project captions and in its opening introduction. Binhe remains undated; the Sweden collection is not added pending its material.
 
-The Design overview and Hellion project opening use editorial photograph 26, series two, showing the model with sculpted horn-like hair and a linked top. The homepage Hellion cover remains series one, photograph 17. The homepage Annet Veerbeek preview uses IMG_9337. Binhe keeps the standing red-headpiece cover in the project listings and opens with the front-facing standing portrait in the dark setting (11.59.18, asset binhe-08); the standing cover remains in the full project gallery.
+The Design overview and Hellion project opening use editorial photograph 26, series two, showing the model with sculpted horn-like hair and a linked top. The homepage Hellion cover remains series one, photograph 17. The homepage Annet Veerbeek preview uses IMG_9337. Binhe keeps the standing red-headpiece cover in the project listings and opens with the model in profile wearing white sculptural palm forms and a red floral collar (11.59.18 (3), asset binhe-11); the standing cover remains in the full project gallery.
 
 ## Expanded project selections and archive controls
 
 Hellion shows 12 editorial photographs before the archive (33 more). Anima Obscura shows 12 photographs including its opening (16 more). Binhe shows 11 photographs including its opening, with a separate row for the two featured landscape images (five more). Every approved photograph remains accessible. The native disclosure controls use an underlined “Show [number] more photographs” action, a total count and “Hide additional photographs” when expanded. The full row remains clickable and keyboard operable; mobile stacks the words without icons or arrows.
 
 Both CV pages were rendered and reviewed. The served public PDF was verified byte-for-byte against the supplied file and contains both pages. Internship entries are shortened to concrete duties; no new dates are assigned to undated internships.
+
+Anima Obscura is identified as a collection by Storm Nijhuis, with Denise Bakker credited for photography and their shared creative direction. Both the homepage and Design overview use “Collection”. Binhe is also labelled “Collection”, retaining the design assistance and product design credit for Zyanya Keizer. The opening photograph was matched to the exact supplied file by its source hash; homepage and Design listing covers remain unchanged.
+
+Phone links and the number are removed from all website pages, including business details and accessibility help. The CV remains exactly as supplied, including its phone number, at the user’s explicit request. Both @hellion.sin and @stormnijhuis are available as text links on Contact and in the footer.
